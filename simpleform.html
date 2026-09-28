@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SỞ THÍCH CỦA BẠN</title>
+    
+    <!-- Bước 4: Tạo style về font chữ áp dụng toàn bộ form -->
+    <style>
+        /* Đặt font chữ chung cho toàn bộ trang và các phần tử trong form */
+        body, input, select, textarea, button {
+            font-family: "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
+            font-size: 14px;
+            color: #333333;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .form-box {
+            background-color: #ffffff;
+            border: 1px solid #dcdcdc;
+            padding: 25px;
+            width: 100%;
+            max-width: 450px;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .form-title {
+            background-color: #0d6efd;
+            color: #ffffff;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        /* Định dạng cho Textfield, Select Box */
+        .form-group input[type="text"],
+        .form-group select {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        /* Định dạng nhóm Radio button */
+        .radio-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 5px;
+        }
+
+        .radio-group label {
+            font-weight: normal;
+            cursor: pointer;
+        }
+
+        /* Định dạng Button */
+        .btn-group {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .btn-submit {
+            background-color: #0d6efd;
+            color: white;
+        }
+
+        .btn-submit:hover {
+            background-color: #0b5ed7;
+        }
+
+        .btn-reset {
+            background-color: #6c757d;
+            color: white;
+        }
+
+        .btn-reset:hover {
+            background-color: #5c636a;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-box">
+        <div class="form-title">SỞ THÍCH CỦA BẠN</div>
+
+        <!-- Bước 2: Thêm thẻ <form> vào -->
+        <form action="#" method="POST">
+
+            <!-- Bước 3: Thêm các phần tử vào form -->
+
+            <!-- 1. Tạo textfield (Họ và tên) -->
+            <div class="form-group">
+                <label for="fullname">Họ và tên:</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Nhập họ và tên của bạn">
+            </div>
+
+            <!-- 2. Tạo radio button (Giới tính) -->
+            <div class="form-group">
+                <label>Giới tính:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="gender" value="nam" checked> Nam</label>
+                    <label><input type="radio" name="gender" value="nu"> Nữ</label>
+                </div>
+            </div>
+
+            <!-- 3. Tạo tùy chọn với select ... option (Tỉnh/Thành phố) -->
+            <div class="form-group">
+                <label for="city">Nơi sống:</label>
+                <select id="city" name="city">
+                    <option value="">-- Chọn Tỉnh/Thành phố --</option>
+                    <option value="hanoi">Hà Nội</option>
+                    <option value="hcm">TP. Hồ Chí Minh</option>
+                    <option value="danang">Đà Nẵng</option>
+                    <option value="haiphong">Hải Phòng</option>
+                    <option value="cantho">Cần Thơ</option>
+                </select>
+            </div>
+
+            <!-- 4. Tạo button (Chấp nhận & Nhập lại) -->
+            <div class="btn-group">
+                <button type="submit" class="btn btn-submit">Chấp nhận</button>
+                <button type="reset" class="btn btn-reset">Nhập lại</button>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
